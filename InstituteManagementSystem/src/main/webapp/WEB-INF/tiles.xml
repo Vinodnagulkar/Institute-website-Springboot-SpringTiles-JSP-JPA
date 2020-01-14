@@ -1,0 +1,109 @@
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+<definition name="studentlayout"
+		template="/WEB-INF/jsps/studenttemplate.jsp">
+		<put-attribute name="header"
+			value="/WEB-INF/jsps/common/header.jsp" />
+		<put-attribute name="studentmenu"
+			value="/WEB-INF/jsps/common/studentmenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/jsps/common/footer.jsp" />
+	</definition>
+															<!--  -->
+	<definition name="commonlayout"
+		template="/WEB-INF/jsps/admintemplate.jsp">
+		<put-attribute name="header"
+			value="/WEB-INF/jsps/common/header.jsp" />
+		<put-attribute name="adminmenu"
+			value="/WEB-INF/jsps/common/adminmenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/jsps/common/footer.jsp" />
+	</definition>	
+																<!--  -->		
+																						
+	<definition name="studentdashboardtiles" extends="studentlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/home.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="commondashboardtiles" extends="commonlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/home.jsp"></put-attribute>
+	</definition>
+	
+	
+	<definition name="registertiles" extends="commonlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/registration.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="displaytiles" extends="commonlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/view.jsp"></put-attribute>
+	</definition>
+	<definition name="logintiles" template="/WEB-INF/jsps/login.jsp">
+	</definition>
+	
+	<definition name="studinfotiles" extends="studentlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/studentinfo.jsp"></put-attribute>
+	</definition>
+	
+	
+	<definition name="updatestudenttiles" extends="studentlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/registration.jsp"></put-attribute>
+	</definition>
+	<definition name="transactiontiles" extends="studentlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/feesTransactions.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="feestiles" extends="studentlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/feespay.jsp"></put-attribute>
+	</definition>
+	
+	<!-- <definition name="mailtiles" extends="studentlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/composemail.jsp"></put-attribute>
+	</definition> -->
+	
+	
+	<definition name="mailtiles" extends="commonlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/composemail.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="studentjavatiles" extends="studentlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/java.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="studenttestingtiles" extends="studentlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/testing.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="adminjavatiles" extends="commonlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/java.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="admintestingtiles" extends="commonlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/testing.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="aboutmetiles" extends="studentlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/aboutme.jsp"></put-attribute>
+	</definition>
+	<definition name="aboutadmintiles" extends="commonlayout">
+		<put-attribute name="body"
+			value="/WEB-INF/jsps/aboutadmin.jsp"></put-attribute>
+	</definition>
+	
+</tiles-definitions>
